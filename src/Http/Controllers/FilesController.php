@@ -1,9 +1,9 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Http\Controllers;
+namespace SauloSilva\NovaGallery\Http\Controllers;
 
-use EricLagarda\NovaGallery\Models\Album;
-use EricLagarda\NovaGallery\Models\Photo;
+use SauloSilva\NovaGallery\Models\Album;
+use SauloSilva\NovaGallery\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;

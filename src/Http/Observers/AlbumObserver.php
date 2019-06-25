@@ -1,8 +1,8 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Http\Observers;
+namespace SauloSilva\NovaGallery\Http\Observers;
 
-use EricLagarda\NovaGallery\Models\Album;
+use SauloSilva\NovaGallery\Models\Album;
 use Illuminate\Support\Facades\Storage;
 
 class AlbumObserver
@@ -27,7 +27,7 @@ class AlbumObserver
      * Saves no column fields into data column
      * and translated fields into extras column
      *
-     * @param  EricLagarda\NovaGallery\Models\Album  $album
+     * @param  SauloSilva\NovaGallery\Models\Album  $album
      *
      * @return bool
      */

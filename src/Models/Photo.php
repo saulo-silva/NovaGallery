@@ -1,8 +1,8 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Models;
+namespace SauloSilva\NovaGallery\Models;
 
-use EricLagarda\NovaGallery\Models\Album;
+//use SauloSilva\NovaGallery\Models\Album;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;

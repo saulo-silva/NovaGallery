@@ -1,5 +1,5 @@
 {
-    "name": "ericlagarda/nova-gallery",
+    "name": "saulo-silva/nova-gallery",
     "description": "A Laravel Nova tool.",
     "keywords": [
         "laravel",
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "EricLagarda\\NovaGallery\\": "src/"
+            "SauloSilva\\NovaGallery\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "EricLagarda\\NovaGallery\\ToolServiceProvider"
+                "SauloSilva\\NovaGallery\\ToolServiceProvider"
             ]
         }
     },

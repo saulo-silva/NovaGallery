@@ -1,6 +1,6 @@
 <?php
 
-namespace EricLagarda\NovaGallery;
+namespace SauloSilva\NovaGallery;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;

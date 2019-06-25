@@ -1,8 +1,11 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Models;
+namespace SauloSilva\NovaGallery\Models;
 
-use EricLagarda\NovaGallery\Models\Photo;
+use App\Models\Package;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Laravel\Nova\Fields\HasOne;
+//use SauloSilva\NovaGallery\Models\Photo;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -16,7 +19,7 @@ class Album extends Model
     /**
      * @var array
      */
-    protected $fillable = ['name', 'description', 'order'];
+    protected $fillable = ['package_id', 'name', 'description', 'order'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -24,6 +27,14 @@ class Album extends Model
     public function photos(): HasMany
     {
         return $this->hasMany(Photo::class)->orderBy('position');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function package(): BelongsTo
+    {
+        return $this->belongsTo(Package::class);
     }
 
     /**

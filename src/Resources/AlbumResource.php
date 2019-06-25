@@ -1,12 +1,13 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Resources;
+namespace SauloSilva\NovaGallery\Resources;
 
 use App\Nova\Resource;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use EricLagarda\NovaGallery\GalleryResourceTool;
-use EricLagarda\NovaGallery\Models\Album;
+use Laravel\Nova\Fields\BelongsTo;
+use SauloSilva\NovaGallery\GalleryResourceTool;
+use SauloSilva\NovaGallery\Models\Album;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\ID;
@@ -98,6 +99,8 @@ class AlbumResource extends Resource
             })->hideFromDetail()
                 ->hideWhenCreating()
                 ->hideWhenUpdating(),
+
+            BelongsTo::make('Package', 'package', 'App\Nova\Package'),
 
             Trix::make(__('Description'), 'description'),
 

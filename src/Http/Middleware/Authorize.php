@@ -1,8 +1,8 @@
 <?php
 
-namespace EricLagarda\NovaGallery\Http\Middleware;
+namespace SauloSilva\NovaGallery\Http\Middleware;
 
-use EricLagarda\NovaGallery\NovaGallery;
+use SauloSilva\NovaGallery\NovaGallery;
 use Laravel\Nova\Nova;
 
 class Authorize

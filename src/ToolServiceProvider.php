@@ -1,11 +1,11 @@
 <?php
 
-namespace EricLagarda\NovaGallery;
+namespace SauloSilva\NovaGallery;
 
-use EricLagarda\NovaGallery\Http\Middleware\Authorize;
-use EricLagarda\NovaGallery\Http\Observers\AlbumObserver;
-use EricLagarda\NovaGallery\Models\Album;
-use EricLagarda\NovaGallery\Resources\AlbumResource;
+use SauloSilva\NovaGallery\Http\Middleware\Authorize;
+use SauloSilva\NovaGallery\Http\Observers\AlbumObserver;
+use SauloSilva\NovaGallery\Models\Album;
+use SauloSilva\NovaGallery\Resources\AlbumResource;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -50,7 +50,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Route::middleware(['nova', Authorize::class])
             ->prefix('nova-vendor/nova-gallery')
-            ->namespace('EricLagarda\NovaGallery\Http\Controllers')
+            ->namespace('SauloSilva\NovaGallery\Http\Controllers')
             ->group(__DIR__.'/../routes/api.php');
     }
 
