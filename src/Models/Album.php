@@ -4,6 +4,7 @@ namespace SauloSilva\NovaGallery\Models;
 
 use App\Models\Package;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Nova\Fields\HasOne;
 //use SauloSilva\NovaGallery\Models\Photo;
 use Illuminate\Database\Eloquent\Model;
@@ -11,6 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Album extends Model
 {
+    use SoftDeletes;
     /**
      * @var string
      */
