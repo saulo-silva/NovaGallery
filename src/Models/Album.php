@@ -5,8 +5,6 @@ namespace SauloSilva\NovaGallery\Models;
 use App\Models\Package;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Nova\Fields\HasOne;
-//use SauloSilva\NovaGallery\Models\Photo;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -21,7 +19,7 @@ class Album extends Model
     /**
      * @var array
      */
-    protected $fillable = ['package_id', 'name', 'description', 'order'];
+    protected $fillable = ['id', 'package_id', 'name', 'description', 'order'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -32,7 +30,7 @@ class Album extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function package(): BelongsTo
     {
