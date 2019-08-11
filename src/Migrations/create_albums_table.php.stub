@@ -20,6 +20,7 @@ class CreateAlbumsTable extends Migration
             $table->string('slug');
             $table->text('description')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::create('el_photos', function (Blueprint $table) {
@@ -32,6 +33,7 @@ class CreateAlbumsTable extends Migration
             $table->integer('position');
             $table->foreign('album_id')->references('id')->on('el_albums')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

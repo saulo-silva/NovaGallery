@@ -4,7 +4,9 @@ namespace SauloSilva\NovaGallery;
 
 use SauloSilva\NovaGallery\Http\Middleware\Authorize;
 use SauloSilva\NovaGallery\Http\Observers\AlbumObserver;
+use SauloSilva\NovaGallery\Http\Observers\PhotoObserver;
 use SauloSilva\NovaGallery\Models\Album;
+use SauloSilva\NovaGallery\Models\Photo;
 use SauloSilva\NovaGallery\Resources\AlbumResource;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -30,6 +32,7 @@ class ToolServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             Album::observe(new AlbumObserver());
+            Photo::observe(new PhotoObserver());
         });
 
         Nova::resources([
