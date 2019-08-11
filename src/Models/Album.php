@@ -42,6 +42,20 @@ class Album extends Model
      *
      * @return string
      */
+    public function getDefaultPhotoAttribute()
+    {
+        if ($this->photos()->count()) {
+            return $this->photos->first()->image;
+        }
+
+        return '';
+    }
+
+    /**
+     * Return default photo for album
+     *
+     * @return string
+     */
     public function defaultPhoto()
     {
         if ($this->photos()->count()) {
