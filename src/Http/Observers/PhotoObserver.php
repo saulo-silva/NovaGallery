@@ -59,7 +59,7 @@ class PhotoObserver
      */
     public function deleted(Photo $photo)
     {
-        logger('deleted');
+        Product::where('photo_id', $photo->id)->delete();
         return true;
     }
 }
