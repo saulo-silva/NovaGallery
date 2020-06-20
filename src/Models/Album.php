@@ -2,7 +2,7 @@
 
 namespace SauloSilva\NovaGallery\Models;
 
-use App\Models\Package;
+use \App\Containers\Package\Models\Package;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;

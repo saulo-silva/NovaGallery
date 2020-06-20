@@ -3,7 +3,7 @@
 namespace SauloSilva\NovaGallery\Http\Observers;
 
 
-use App\Models\Product;
+use App\Containers\Product\Models\Product;
 use SauloSilva\NovaGallery\Models\Photo;
 
 class PhotoObserver
